@@ -5,6 +5,7 @@ When we move the viewer and other EC2 instances over to Terraform management we 
 VPC under here
 */
 
+/*
 data "aws_vpc" "existing_cudl_vpc" {
   id = var.vpc-id
 }
@@ -16,6 +17,7 @@ data "aws_subnet" "cudl_subnet" {
 data "aws_security_group" "default" {
   id = var.security-group-id
 }
+*/
 
 /*
 resource "aws_vpc" "cudl_vpc" {
@@ -54,4 +56,5 @@ resource "aws_subnet" "subnet_private" {
   tags = {
     Name = "${var.project}-subnet-private"
   }
-}*/
+}
+*/

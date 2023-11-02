@@ -11,9 +11,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-state-kie4di"
+    bucket         = "terraform-state-ako1e9"
     key            = "staging-cudl-infra.tfstate"
-    dynamodb_table = "terraform-state-lock-kie4di"
+    dynamodb_table = "terraform-state-lock-ako1e9"
     region         = "eu-west-1"
   }
 

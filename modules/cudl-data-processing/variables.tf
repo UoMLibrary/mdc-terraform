@@ -174,14 +174,3 @@ variable "source-bucket-sqs-notifications" {
   type        = list(any)
 }
 
-variable "datadog-layer-1-arn" {
-  description = "Required layer for datadog"
-  type        = string
-  default     = "arn:aws:lambda:eu-west-1:464622532012:layer:dd-trace-java:4"
-}
-
-variable "datadog-layer-2-arn" {
-  description = "Required layer for datadog"
-  type        = string
-  default     = "arn:aws:lambda:eu-west-1:464622532012:layer:Datadog-Extension:23"
-}

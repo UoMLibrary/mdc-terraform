@@ -1,3 +1,4 @@
+/*
 resource "aws_efs_file_system" "efs-volume" {
 
   availability_zone_name = "${var.deployment-aws-region}a"
@@ -47,3 +48,4 @@ resource "aws_efs_mount_target" "efs-mount-point" {
 
   depends_on = [aws_efs_file_system.efs-volume]
 }
+*/

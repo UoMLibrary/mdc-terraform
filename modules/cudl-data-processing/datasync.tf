@@ -1,3 +1,4 @@
+/*
 resource "aws_datasync_task" "cudl-production-cudl-data-releases-s3-to-efs" {
   destination_location_arn = aws_datasync_location_efs.cudl-datasync-efs.arn
   name                     = "${var.environment}-cudl-data-releases-s3-to-efs"
@@ -46,3 +47,4 @@ resource "aws_datasync_location_s3" "cudl-datasync-s3" {
     bucket_access_role_arn = aws_iam_role.assume-datasync-role.arn
   }
 }
+*/

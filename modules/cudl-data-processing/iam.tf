@@ -86,15 +86,6 @@ data "aws_iam_policy_document" "allow-get-and-list-policy" {
         "arn:aws:lambda:*:*:${var.environment}-*"
       ]
   }
-  statement {
-    actions = [
-      "secretsmanager:GetSecretValue",
-      "secretsmanager:ListSecrets"
-    ]
-    resources = [
-       "arn:aws:secretsmanager:${var.deployment-aws-region}:${var.aws-account-number}:secret:datadog_api*"
-    ]
-  }
 }
 
 resource "aws_iam_role" "assume-lambda-role" {
@@ -114,7 +105,7 @@ resource "aws_iam_role_policy_attachment" "cudl-policy-and-role-attachment" {
   policy_arn = aws_iam_policy.run-lambda-policy.arn
 }
 
-
+/*
 resource "aws_s3_bucket_acl" "transcriptions-bucket-acl" {
   bucket = aws_s3_bucket.transcriptions-bucket.id
   acl    = "public-read"
@@ -139,6 +130,7 @@ data "aws_iam_policy_document" "s3-transcription-document" {
     ]
   }
 }
+*/
 
 data "aws_iam_policy_document" "assume-role-datasync-policy" {
   statement {
